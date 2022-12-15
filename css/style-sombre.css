@@ -1,0 +1,482 @@
+html {
+  height: 100%;
+  margin: 0;
+  background-image: url("/images/snowGif.gif");
+  background-size: auto;
+  font-family: "Poppins", sans-serif, Verdana, sans-serif;
+}
+
+/* MODE NOEL + ICONES */
+
+#trounoir {
+  display: none;
+}
+
+#nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#modeNoel{
+  font-family: "Poppins", sans-serif;
+  padding-right: 10px;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgba(1, 63, 5, 0.7);
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+
+#icones{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#share {
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#mail {
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#rocket {
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* TITRE */
+
+h1 {
+  position: relative;
+  color: #bf242e;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 175px;
+  font-size: lighter;
+  margin-top: 50px;
+  margin-bottom: 0;
+  left: -50px;
+}
+
+#planete {
+  position: absolute;
+  display: inline-block;
+  height: 165px;
+  width: 165px;
+  /*background-image: url("/images/planete_noel.png");
+  background-size: contain;*/
+  top: 22%;
+
+  -webkit-animation-name: moonOrbit;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 15s;
+}
+
+hr {
+  display: none;
+}
+
+#tampon{
+  background-image: url("/images/tampon_christmas.png");
+  background-size: cover;
+  height: 130px;
+  max-width: 290px;
+  margin: auto;
+  /*position: relative;
+  top: -120px;*/
+  z-index: 1;
+  margin-bottom: 50px;
+}
+
+h2 {
+  color:#c91100;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 80px;
+  font-family: "Poppins", sans-serif;
+}
+
+/*INTRO*/
+
+/*texte d'intro + contour guirlande*/
+
+.introduction {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 800px;
+  max-height: 357px;
+  margin-top: 150px;
+  margin-bottom: 120px;
+}
+
+#guirlandeImage{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+
+.introduction p {
+  z-index: 2;
+  top: 15%;
+  font-size: clamp(14px, 2.3vw, 2rem);
+  text-align: center;
+  width: 75%;
+  margin: 0;
+  color: #c91100;
+  font-weight: bold;
+}
+
+
+/*V2
+
+.introduction {
+  max-width: 800px;
+}
+
+#guirlande{ 
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  width: 100%;
+  height: 357px;
+  background-image: url("/images/cadre_guirlande.png");
+}
+
+#guirlande p {
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: center;
+  color: #c91100;
+}
+*/
+
+/*PHOTOS AVANT 1995*/
+#oups {
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+  font-size: 15px;
+  background-color: rgba(180, 0, 0, 0.9);
+  color: white;
+  opacity: 0.9;
+  padding: 12px;
+  border-radius: 20%;
+  margin-bottom: 35px;
+  display: none;
+}
+
+/* DATE */
+
+input {
+  font-size: 25px;
+  margin-bottom: 55px;
+  margin-top: 55px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+#input {
+  text-align: center;
+}
+
+#input label {
+  color:#c91100;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* PHOTO DU JOUR */
+
+#APOD {
+  text-align: center;
+}
+
+#photo{
+  width: 100%;
+}
+
+p {
+  color: white;
+  /* line-height: 24px; */
+}
+
+/* ASTEROIDE DU JOUR */
+
+#NEO {
+  padding: 5px;
+}
+
+#NEO .content {
+  margin-top: 20px;
+}
+
+#NEO #description {
+  width: 400px;
+}
+
+#NEO ul,
+li {
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+h4 {
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+  font-size: 15px;
+  background-color: rgba(180, 0, 0, 0.9);
+  color: white;
+  opacity: 0.9;
+  padding: 12px;
+  border-radius: 20%;
+  margin-bottom: 35px;
+}
+
+/* BLOCS DE CONTENU */
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 14px;
+  margin: auto;
+}
+
+.content h3 {
+  color: rgba(1, 63, 5);;
+  text-align: left;
+  margin: 0;
+}
+
+#content-picture {
+  padding: 5px;
+  max-width: 700px;
+  margin: 0 auto; /*pas de marge verticale*/
+  display: none;
+}
+
+#description {
+  padding: 5px;
+  max-width: 700px;
+  margin: 0 auto; /*pas de marge verticale*/
+  display: none;
+}
+
+#description p {
+  background-color:rgba(1, 63, 5, 0.8);
+  text-align: left;
+  padding: 10px;
+  margin: 0; /*pour que la description soit "collée" dessous*/
+  margin-top: 15px;
+}
+
+#content-picture p {
+  background-color: rgba(1, 63, 5, 0.8);
+  text-align: left;
+  padding: 10px;
+  margin: 0; /*pour que la description soit "collée" dessous*/
+  margin-top: 15px;
+}
+
+.content img {
+  max-width: 700px;
+  max-height: 700px;
+}
+
+.image {
+  justify-content: center;
+  margin: auto;
+}
+
+/* TERRE ET ASTEROIDES */
+
+#earth {
+  position: relative;
+  height: 450px;
+  width: 450px;
+  margin-top: 50px;
+  margin-bottom: 300px;
+  margin: 0 auto; /*pas de marge verticale*/
+  background-image: url(/images/terre_noel2.png);
+  background-size: 450px;
+  overflow: visible;
+}
+
+#moonContainer {
+  position: absolute;
+  top: -20px;
+  left: -85px;
+  width: 600px;
+  height: 506px;
+  /*border: 2px solid white;*/
+  border-radius: 228px;
+
+  -webkit-animation-name: moonOrbit;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 15s;
+}
+
+#moon {
+  position: absolute;
+  top: -55px;
+  left: 175px;
+  width: 60px;
+  height: 60px;
+  background-image: url(/images/aste_noel.png);
+  background-size: 60px;
+
+  -webkit-animation-name: moonRotate;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 5s;
+}
+
+@-webkit-keyframes moonOrbit {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes moonRotate {
+  from {
+    -webkit-transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+#moonContainer2 {
+  position: absolute;
+  top: -15px;
+  left: -120px;
+  width: 600px;
+  height: 456px;
+  /*border: 2px solid white;*/
+  border-radius: 228px;
+
+  -webkit-animation-name: moonOrbit;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 10s;
+}
+
+#moon2 {
+  position: absolute;
+  top: -55px;
+  left: 175px;
+  width: 40px;
+  height: 40px;
+  background-image: url(/images/aste_noel.png);
+  background-size: 40px;
+
+  -webkit-animation-name: moonRotate;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 10s;
+}
+
+/* INFOS ASTEROIDES */
+
+#description .hide {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: black;
+  font-style: italic;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 0;
+  max-width: 400px;
+}
+
+#description img {
+  filter: invert(1);
+  height: 20px;
+  width: 20px;
+}
+
+/*Tablette : entre 600 et 1024 pixels (en mode portrait)*/
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 115px;
+  }
+  hr {
+    width: 300px;
+  }
+  #planete {
+    height: 110px;
+    width: 110px;
+  }
+  #share, #mail, #rocket {
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #earth {
+    height: 300px;
+    width: 300px;
+    background-size: contain;
+  }
+}
+
+/*Mobile : entre 320 et 600 pixels (en mode portrait)*/
+@media screen and (max-width: 600px) {
+  html {
+    margin: 1%;
+  }
+  h1 {
+    font-size: 60px;
+    left: 0;
+  }
+  #planete {
+    height: 70px;
+    width: 70px;
+  }
+  #tampon{
+    height: 100px;
+    max-width: 230px;
+    margin: auto;
+    /*position: relative;
+    top: -120px;*/
+    z-index: 1;
+    margin-bottom: 50px;
+  }
+  #icones{
+    margin-top: 10px;
+  }
+  #share, #mail, #rocket {
+    height: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  #earth {
+    height: 250px;
+    width: 250px;
+    background-size: contain;
+  }
+}

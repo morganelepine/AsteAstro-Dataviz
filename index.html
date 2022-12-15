@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" id="css" title="" />
+    <link rel="alternate stylesheet" type="text/css" href="./css/style-sombre.css" id="css" title="sombre" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>AsteAstro</title>
+  </head>
+
+  <body>
+
+    <!-- Navigation : mode Noël + icônes -->
+    <div id="nav">
+      <div id="NoelMode">
+        <button id="modeNoel">&#127876 Toggle to the Christmas Mode</button>
+      </div>
+      <div id="icones">
+        <a href="https://twitter.com/Fraizhe" target="_blank"><img id="share" src="/images/share_FILL0_wght400_GRAD0_opsz48.png" /></a>
+        <a href="mailto:bechetgregor5@gmail.com" target="_blank"><img id="mail" src="/images/mail_FILL0_wght400_GRAD0_opsz48.png" /></a>
+        <a href="https://api.nasa.gov/" target="_blank"><img id="rocket" src="/images/rocket_launch_FILL0_wght400_GRAD0_opsz48.png"/></a>
+      </div>
+    </div>
+
+    <!-- En-tête -->
+
+    <img id="trounoir" src="/images/Black-Hole-PNG-Transparent-Image.png" />
+    
+    <h1>
+      Asté Astr
+      <span >
+        <img id="planete" src="/images/exploding-planet-with-transparent-background-psd-415168.png">
+      </span> 
+    </h1>
+
+    <hr />
+
+    <div id="tampon"></div>
+
+      <div class="introduction">
+        <img id="guirlandeImage" src="/images/cadre_guirlande.png">
+        <p>
+          &#128640; Welcome to Asté Astro website! <br>
+          It allows you for a given date to discover the astronomical photo of the day
+          as well as the nearest object to the earth, thanks to information provided by NASA.
+        </p>
+      </div>
+    
+    <!-- Saisir la date puis aller directement à la section APOD -->
+    <a href="#APOD" id="goToAPOD">
+      <div id="input">
+        <label>Select a date</label>
+        <input type="date" id="date" onchange="window.location.href='#APOD'" />
+      </div>
+    </a>
+
+    <!--Si date avant 1995-->
+    <p id="oups">
+      <!-- La NASA ne publiait pas de photos astronomiques avant 1995. La première
+        photo date du 16 juin 1995. Tu peux par contre consulter les asteroïdes
+        les plus proches de la terre pour ces dates -->
+    </p>
+    <!-- Photo du jour -->
+    <section id="APOD">
+      <div class="content">
+        <div class="image">
+          <img id="photo" />
+        </div>
+        <div id="content-picture">
+          <h3 id="title"></h3>
+          <p id="description-picture"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Astéroïde autour de la terre -->
+    <section id="NEO">
+
+      <div class="content">
+
+        <div id="earth">
+          <div id="moonContainer">
+            <div id="moon"></div>
+          </div>
+          <div id="moonContainer2">
+            <div id="moon2"></div>
+          </div>
+        </div>
+
+        <!-- Informations asteroides-->
+
+        <div id="description">
+          <p id="nom"></p>
+
+          <ul id="infoNom" class="hide">
+            The asteroïd's name is composed by two elements :
+            <li>The year it was discovered.</li>
+            <li>
+              Followed by 2 letters that come from the discovery of the object
+              during the year : 1-15 january will get AA, AB, AC etc., 16-31
+              january will get BA, BB, BC etc., to finally get YA, YB, YC etc.
+              between 16-31 December.
+            </li>
+            <br />
+            For example an astéroïd named 1992 KD is the 4th discovered in the
+            second half of may 1992.
+          </ul>
+
+          <p id="hazardous"></p>
+          <p id="infoHazardous" class="hide">
+            A potentially hazardous object (PHO) is either an asteroid or a
+            comet, with an orbit that is large enough to cause significant
+            regional damage in the event of Impact.
+          </p>
+          <p id="sentry"></p>
+          <p id="InfoSentry" class="hide">
+            Sentry is a highly automated impact prediction system. It
+            continually monitors the most up-to-date asteroid catalog for
+            possibilities of future impact with Earth over the next 100+ years.
+          </p>
+          <p id="distance"></p>
+          <p id="infoDistance" class="hide">
+            The distance value of the celestial object from the earth.
+          </p>
+          <p id="diametre_min"></p>
+          <p id="InfoDiametreMin" class="hide">
+            This is the lowest diameter the asteroïd was.
+          </p>
+          <p id="diametre_max"></p>
+          <p id="InfoDiametreMax" class="hide">
+            This is the origin diameter of the asteroïd, when he just came from
+            a planet that aboted.
+          </p>
+          <p id="vitesse"></p>
+          <p id="InfoVitesse" class="hide">
+            The velocity of an asteroid is by average 18km/s, fastest asteroid
+            can average 30km/s.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Musique
+    <section id="audio">
+      <audio class="musique" controls autoplay>
+        <source src="/media/vive-le-vent.mp3" type="audio/mp3">
+      </audio>
+    </section>
+    -->
+
+    <!-- Javascript -->
+    <script type="module" src="./js/script.js" defer></script>
+  </body>
+</html>
