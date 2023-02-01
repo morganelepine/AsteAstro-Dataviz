@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap');
+
 html {
-  height: 100%;
+  /* height: 100%;
+  width: 100%; */
   margin: 0;
-  background-image: url("/images/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
-  background-size: auto;
-  /*background-repeat: no-repeat*/
-  font-family: "Poppins", sans-serif, Verdana, sans-serif;
+  /* background-image: url("/images/andy-holmes-rCbdp8VCYhQ-unsplash.jpg"); */
+  background-size: cover;
+  font-family: 'Poppins', sans-serif;
 }
 
 #guirlandeImage{
@@ -23,51 +25,49 @@ html {
 
 #modeNoel{
   font-family: "Poppins", sans-serif;
-  padding-right: 10px;
-  padding-left: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 10px;
+  margin: 10px;
   background-color: rgba(126,118,176, 0.85);
   color: white;
   border-radius: 5px;
   border: none;
+  box-shadow: 5px 5px 5px #001537;
 }
 
-#icones{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+/*EN TETE*/
+
+#enTete{
+  height: 100vh;
 }
 
-#share {
-  /*position: absolute;*/
-  height: 50px;
-  filter: invert();
-  padding-left: 20px;
-  padding-right: 20px;
-  /*top: 10px;
-  right: 10px;*/
-}
-#mail {
-  /*position: absolute;*/
-  height: 50px;
-  filter: invert();
-  padding-left: 20px;
-  padding-right: 20px;
-  /*top: 10px;
-  right: 85px;*/
-}
-#rocket {
-  /*position: absolute;*/
-  height: 50px;
-  filter: invert();
-  padding-left: 20px;
-  padding-right: 20px;
-  /*top: 10px;
-  right: 160px;*/
+.parallax {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
 }
 
-/* TITRE */
+.parallax1{
+  background-image: url("/images/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
+}
+
+.parallax2{
+  background-image: url("/images/andy-holmes-rCbdp8VCYhQ-unsplash.jpg");
+}
+
+.parallax3{
+  background-image: url("/images/pexels-francesco-ungaro-998641.jpg");
+}
+
+.parallax4{
+  background-image: url("/images/aldebaran-s-qtRF_RxCAo0-unsplash.jpg");
+}
+
+#contenu{
+  background-image: url("/images/pexels-shay-wood-574116.jpg");
+  background-size: cover;
+  display: none;
+}
 
 h1 {
   position: relative;
@@ -75,10 +75,18 @@ h1 {
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 175px;
-  font-size: lighter;
   margin-top: 50px;
-  margin-bottom: 20px;
-  left: -50px;
+  margin-bottom: 0;
+  left: -65px;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 70px;
+  margin: 0;
+  padding: 50px;
 }
 
 #planete {
@@ -99,50 +107,23 @@ h1 {
   -webkit-animation-duration: 15s;
 }
 
-hr {
-  height: 2px;
-  width: 500px;
-  background-color: white;
-  margin-bottom: 70px;
-}
-
-h2 {
-  color: white;
-  text-align: center;
-  font-size: 40px;
-  margin-top: 80px;
-  font-family: "Poppins", sans-serif;
-}
-
-/*IMAGES*/
-
-#trounoir {
-  position: absolute;
-  height: 500px;
-  left: -125px;
-  top: -125px;
-  z-index: -1;
-}
-
-/*INTRO*/
-
 .introduction {
   text-align: center;
-  max-width: 500px;
+  max-width: 900px;
   margin: auto;
   font-size: 25px;
-  background-color: #7e76b0;
-  opacity: 0.8;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 25px;
-  padding-right: 25px;
-  border-radius: 20%;
-  margin-bottom: 25px;
+  background-color: white;
+  opacity: 0.7;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #001537;
 }
 
 .introduction p {
-  line-height: 30px;
+  padding: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  font-size: 20px;
+  color: #001537;
 }
 
 /*PHOTOS AVANT 1995*/
@@ -162,10 +143,13 @@ h2 {
 
 /* DATE */
 
+#input{
+  padding-top: 30px;
+}
+
 input {
   font-size: 25px;
-  margin-bottom: 25px;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
 a:link {
@@ -187,6 +171,7 @@ a:link {
 
 #APOD {
   text-align: center;
+  padding-bottom: 70px;
 }
 
 #photo{
@@ -201,7 +186,7 @@ p {
 /* ASTEROIDE DU JOUR */
 
 #NEO {
-  padding: 5px;
+  padding-bottom: 150px;
   /*margin: auto;*/
 }
 
@@ -221,15 +206,10 @@ li {
 
 h4 {
   text-align: center;
-  max-width: 500px;
   margin: auto;
-  font-size: 15px;
-  background-color: #7e76b0;
   color: white;
-  opacity: 0.9;
-  padding: 12px;
-  border-radius: 20%;
-  margin-bottom: 35px;
+  font-size: 18px;
+  margin: 0 20px 50px;
 }
 
 /* BLOCS DE CONTENU */
@@ -272,9 +252,7 @@ h4 {
 }
 
 #content-picture p {
-  background-color: rgba(0, 0, 0, 0.65);
   text-align: left;
-  padding: 10px;
   margin: 0; /*pour que la description soit "collée" dessous*/
   margin-top: 15px;
 }
@@ -287,6 +265,12 @@ h4 {
 .image {
   justify-content: center;
   margin: auto;
+  margin-bottom: 30px;
+}
+
+#photo {
+  box-shadow: 2px 2px 20px white;
+  border-radius: 30px;
 }
 
 /* TERRE ET ASTEROIDES */
@@ -296,7 +280,6 @@ h4 {
   height: 400px;
   width: 400px;
   margin-top: 50px;
-  margin-bottom: 300px;
   margin: 0 auto; /*pas de marge verticale*/
   background-image: url(/images/terre.png);
   background-size: 400px;
@@ -307,10 +290,10 @@ h4 {
 #moonContainer {
   position: absolute;
   top: -20px;
-  left: -85px;
-  width: 600px;
-  height: 506px;
-  /*border: 2px solid white;*/
+  left: -25px;
+  width: 400px;
+  height: 406px;
+  /* border: 2px solid white; */
   border-radius: 228px;
 
   -webkit-animation-name: moonOrbit;
@@ -323,8 +306,8 @@ h4 {
   position: absolute;
   top: -55px;
   left: 175px;
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   background-image: url(/images/aste.png);
   background-size: 60px;
 
@@ -355,10 +338,10 @@ h4 {
 #moonContainer2 {
   position: absolute;
   top: -15px;
-  left: -120px;
-  width: 600px;
+  left: -20px;
+  width: 400px;
   height: 456px;
-  /*border: 2px solid white;*/
+  /* border: 2px solid white; */
   border-radius: 228px;
 
   -webkit-animation-name: moonOrbit;
@@ -369,10 +352,10 @@ h4 {
 
 #moon2 {
   position: absolute;
-  top: -55px;
-  left: 175px;
-  width: 40px;
-  height: 40px;
+  top: -25px;
+  left: 80px;
+  width: 20px;
+  height: 20px;
   background-image: url(/images/aste.png);
   background-size: 40px;
 
@@ -386,7 +369,7 @@ h4 {
 
 #description .hide {
   display: none;
-  background-color: rgba(247, 239, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.7);
   color: black;
   font-style: italic;
   padding-top: 5px;
@@ -406,17 +389,15 @@ h4 {
   h1 {
     font-size: 115px;
   }
-  hr {
-    width: 300px;
+  h2 {
+    font-size: 50px;
+  }
+  .introduction {
+    margin: 0 20px;
   }
   #planete {
     height: 110px;
     width: 110px;
-  }
-  #share, #mail, #rocket {
-    height: 40px;
-    padding-left: 15px;
-    padding-right: 15px;
   }
   #earth {
     height: 300px;
@@ -425,17 +406,27 @@ h4 {
   }
 }
 
+@media screen and (max-width: 800px) {
+  #moonContainer, #moonContainer2{
+    display: none;
+  }
+}
+
 /*Mobile : entre 320 et 600 pixels (en mode portrait)*/
 @media screen and (max-width: 600px) {
   html {
     margin: 1%;
   }
-  #trounoir {
-    height: 300px;
-  }
   h1 {
     font-size: 60px;
     left: 0;
+  }
+  h2 {
+    font-size: 40px;
+    padding: 30px;
+  }
+  h4 {
+    font-size: 15px;
   }
   hr {
     width: 100px;
@@ -443,11 +434,6 @@ h4 {
   #planete {
     height: 70px;
     width: 70px;
-  }
-  #share, #mail, #rocket {
-    height: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
   }
   .introduction p {
     font-size: 20px;

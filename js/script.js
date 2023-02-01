@@ -18,6 +18,10 @@ boutonNoel.onclick = function noelMode() {
 document.getElementById("date").oninput = function () {
   fetchData();
   hidePictureDescription();
+
+  let content = document.getElementById("contenu")
+  content.style.display = "block"
+
   let oldTitleh2 = document.getElementsByTagName("h2");
 
   if (oldTitleh2.length === 0) {

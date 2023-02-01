@@ -6,60 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" id="css" title="" />
     <link rel="alternate stylesheet" type="text/css" href="./css/style-sombre.css" id="css" title="sombre" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&family=Poppins:wght@300&display=swap"
-      rel="stylesheet"
-    />
     <title>AsteAstro</title>
   </head>
 
   <body>
 
-    <!-- Navigation : mode Noël + icônes -->
-    <div id="nav">
-      <div id="NoelMode">
-        <button id="modeNoel">&#127876 Toggle to the Christmas Mode</button>
-      </div>
-      <div id="icones">
-        <a href="https://twitter.com/Fraizhe" target="_blank"><img id="share" src="/images/share_FILL0_wght400_GRAD0_opsz48.png" /></a>
-        <a href="mailto:bechetgregor5@gmail.com" target="_blank"><img id="mail" src="/images/mail_FILL0_wght400_GRAD0_opsz48.png" /></a>
-        <a href="https://api.nasa.gov/" target="_blank"><img id="rocket" src="/images/rocket_launch_FILL0_wght400_GRAD0_opsz48.png"/></a>
-      </div>
-    </div>
-
+    
     <!-- En-tête -->
+    <section id="enTete" class="parallax parallax1">
 
-    <img id="trounoir" src="/images/Black-Hole-PNG-Transparent-Image.png" />
-    
-    <h1>
-      Asté Astr
-      <span >
-        <img id="planete" src="/images/exploding-planet-with-transparent-background-psd-415168.png">
-      </span> 
-    </h1>
-
-    <hr />
-
-    <div id="tampon"></div>
-
-      <div class="introduction">
-        <img id="guirlandeImage" src="/images/cadre_guirlande.png">
-        <p>
-          &#128640; Welcome to Asté Astro website! <br>
-          It allows you for a given date to discover the astronomical photo of the day
-          as well as the nearest object to the earth, thanks to information provided by NASA.
-        </p>
+      <!-- Navigation : mode Noël -->
+      <div id="nav">
+        <div id="NoelMode">
+          <button id="modeNoel">&#127876 Toggle to the Christmas Mode</button>
+        </div>
       </div>
-    
-    <!-- Saisir la date puis aller directement à la section APOD -->
-    <a href="#APOD" id="goToAPOD">
-      <div id="input">
-        <label>Select a date</label>
-        <input type="date" id="date" onchange="window.location.href='#APOD'" />
-      </div>
-    </a>
+
+      <h1>
+        Asté Astr
+        <span >
+          <img id="planete" alt="Planète" src="/images/exploding-planet-with-transparent-background-psd-415168.png">
+        </span> 
+      </h1>
+  
+      <div id="tampon"></div>
+  
+        <div class="introduction">
+          <img id="guirlandeImage" alt ="Image d'une guirlande rouge entourant le texte" src="/images/cadre_guirlande.png">
+          <p>
+            &#128640; Welcome to Asté Astro website! <br>
+            It allows you for a given date to discover the astronomical photo of&nbsp;the day
+            as well as the nearest object to the earth, thanks to information provided by NASA.
+          </p>
+        </div>
+
+      <!-- Saisir la date puis aller directement à la section APOD -->
+      <a href="#APOD" id="goToAPOD">
+        <div id="input">
+          <label>Select a date and let the magic happen ✨</label>
+          <BR>
+          <input type="date" id="date" min="1995-06-16"/>
+        </div>
+      </a>
+
+    </section>    
+
+
+    <section id="contenu">
 
     <!--Si date avant 1995-->
     <p id="oups">
@@ -67,31 +60,48 @@
         photo date du 16 juin 1995. Tu peux par contre consulter les asteroïdes
         les plus proches de la terre pour ces dates -->
     </p>
+
+
     <!-- Photo du jour -->
-    <section id="APOD">
+    <section id="APOD" class="parallax parallax3">
+
+      <h2>Picture of the Day</h2>
+
       <div class="content">
+
         <div class="image">
-          <img id="photo" />
+          <img id="photo" alt="Photo of the day" />
         </div>
+
         <div id="content-picture">
           <h3 id="title"></h3>
           <p id="description-picture"></p>
         </div>
+
       </div>
+
     </section>
 
+
     <!-- Astéroïde autour de la terre -->
-    <section id="NEO">
+    <section id="NEO" class="parallax parallax4">
+
+      <h2>Asteroid of the Day</h2>
+
+      <h4>Click on earth to discover the asteroid of the day!</h4>
 
       <div class="content">
 
         <div id="earth">
+
           <div id="moonContainer">
             <div id="moon"></div>
           </div>
+
           <div id="moonContainer2">
             <div id="moon2"></div>
           </div>
+
         </div>
 
         <!-- Informations asteroides-->
@@ -147,13 +157,8 @@
       </div>
     </section>
 
-    <!-- Musique
-    <section id="audio">
-      <audio class="musique" controls autoplay>
-        <source src="/media/vive-le-vent.mp3" type="audio/mp3">
-      </audio>
     </section>
-    -->
+
 
     <!-- Javascript -->
     <script type="module" src="./js/script.js" defer></script>
