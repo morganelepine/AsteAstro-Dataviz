@@ -417,9 +417,6 @@ h4 {
 
 /*Mobile : entre 320 et 600 pixels (en mode portrait)*/
 @media screen and (max-width: 600px) {
-  html {
-    margin: 1%;
-  }
   h1 {
     font-size: 60px;
     left: 0;
