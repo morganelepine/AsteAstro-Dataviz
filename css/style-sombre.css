@@ -1,4 +1,6 @@
-html {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+body {
   height: 100%;
   margin: 0;
   background-image: url("/images/snowGif.gif");
@@ -7,10 +9,6 @@ html {
 }
 
 /* MODE NOEL + ICONES */
-
-#trounoir {
-  display: none;
-}
 
 #nav{
   display: flex;
@@ -22,36 +20,13 @@ html {
 
 #modeNoel{
   font-family: "Poppins", sans-serif;
-  padding-right: 10px;
-  padding-left: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: rgba(1, 63, 5, 0.7);
+  padding: 10px;
+  margin: 10px;
+  background-color: rgba(60, 115, 181, 0.7);
   color: white;
   border-radius: 5px;
   border: none;
-}
-
-#icones{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-#share {
-  height: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-#mail {
-  height: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-#rocket {
-  height: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
+  box-shadow: 1px 1px 5px #001537;
 }
 
 /* TITRE */
@@ -62,10 +37,9 @@ h1 {
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 175px;
-  font-size: lighter;
   margin-top: 50px;
   margin-bottom: 0;
-  left: -50px;
+  left: -65px;
 }
 
 #planete {
@@ -83,29 +57,27 @@ h1 {
   -webkit-animation-duration: 15s;
 }
 
-hr {
-  display: none;
-}
-
 #tampon{
   background-image: url("/images/tampon_christmas.png");
   background-size: cover;
-  height: 130px;
-  max-width: 290px;
+  height: 200px;
+  max-width: 460px;
   margin: auto;
-  /*position: relative;
-  top: -120px;*/
+  position: relative;
+  top: -220px;
+  left: 420px;
   z-index: 1;
-  margin-bottom: 50px;
 }
 
 h2 {
   color:#c91100;
   text-align: center;
-  font-size: 40px;
-  margin-top: 80px;
+  font-size: 70px;
+  margin: 0;
+  padding: 50px;
   font-family: "Poppins", sans-serif;
 }
+
 
 /*INTRO*/
 
@@ -119,7 +91,6 @@ h2 {
   position: relative;
   max-width: 800px;
   max-height: 357px;
-  margin-top: 150px;
   margin-bottom: 120px;
 }
 
@@ -132,12 +103,17 @@ h2 {
 .introduction p {
   z-index: 2;
   top: 15%;
-  font-size: clamp(14px, 2.3vw, 2rem);
+  font-size: clamp(14px, 2.2vw, 1.8rem);
   text-align: center;
   width: 75%;
   margin: 0;
   color: #c91100;
-  font-weight: bold;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+#enTete{
+  margin-bottom: 70px;
 }
 
 
@@ -185,8 +161,7 @@ h2 {
 
 input {
   font-size: 25px;
-  margin-bottom: 55px;
-  margin-top: 55px;
+  margin: 10px 0;
 }
 
 a:link {
@@ -222,11 +197,12 @@ p {
 /* ASTEROIDE DU JOUR */
 
 #NEO {
-  padding: 5px;
+  padding-bottom: 150px;
 }
 
 #NEO .content {
   margin-top: 20px;
+  align-items: flex-start;
 }
 
 #NEO #description {
@@ -241,30 +217,29 @@ li {
 
 h4 {
   text-align: center;
-  max-width: 500px;
   margin: auto;
-  font-size: 15px;
-  background-color: rgba(180, 0, 0, 0.9);
-  color: white;
-  opacity: 0.9;
-  padding: 12px;
-  border-radius: 20%;
-  margin-bottom: 35px;
+  color: #3c73b5;
+  font-size: 18px;
+  margin: 0 20px 50px;
 }
 
 /* BLOCS DE CONTENU */
 
+#contenu{
+  display: none;
+}
+
 .content {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   padding: 14px;
   margin: auto;
 }
 
 .content h3 {
-  color: rgba(1, 63, 5);;
+  color: rgba(60, 115, 181);
   text-align: left;
   margin: 0;
 }
@@ -284,7 +259,7 @@ h4 {
 }
 
 #description p {
-  background-color:rgba(1, 63, 5, 0.8);
+  background-color:rgba(60, 115, 181, 0.6);
   text-align: left;
   padding: 10px;
   margin: 0; /*pour que la description soit "collée" dessous*/
@@ -292,11 +267,12 @@ h4 {
 }
 
 #content-picture p {
-  background-color: rgba(1, 63, 5, 0.8);
+  background-color: rgba(60, 115, 181, 0.6);
   text-align: left;
   padding: 10px;
   margin: 0; /*pour que la description soit "collée" dessous*/
   margin-top: 15px;
+  border-radius: 20px;
 }
 
 .content img {
@@ -307,6 +283,11 @@ h4 {
 .image {
   justify-content: center;
   margin: auto;
+}
+
+#photo {
+  box-shadow: 2px 2px 20px black;
+  border-radius: 30px;
 }
 
 /* TERRE ET ASTEROIDES */
@@ -327,9 +308,9 @@ h4 {
   position: absolute;
   top: -20px;
   left: -85px;
-  width: 600px;
+  width: 500px;
   height: 506px;
-  /*border: 2px solid white;*/
+  /* border: 2px solid white; */
   border-radius: 228px;
 
   -webkit-animation-name: moonOrbit;
@@ -342,10 +323,10 @@ h4 {
   position: absolute;
   top: -55px;
   left: 175px;
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   background-image: url(/images/aste_noel.png);
-  background-size: 60px;
+  background-size: 55px;
 
   -webkit-animation-name: moonRotate;
   -webkit-animation-iteration-count: infinite;
@@ -373,11 +354,11 @@ h4 {
 
 #moonContainer2 {
   position: absolute;
-  top: -15px;
-  left: -120px;
-  width: 600px;
-  height: 456px;
-  /*border: 2px solid white;*/
+  top: -10px;
+  left: -80px;
+  width: 500px;
+  height: 450px;
+  /* border: 2px solid white; */
   border-radius: 228px;
 
   -webkit-animation-name: moonOrbit;
@@ -405,7 +386,7 @@ h4 {
 
 #description .hide {
   display: none;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.5);
   color: black;
   font-style: italic;
   padding-top: 5px;
@@ -420,59 +401,80 @@ h4 {
   width: 20px;
 }
 
+
+
+
+
 /*Tablette : entre 600 et 1024 pixels (en mode portrait)*/
 @media screen and (max-width: 1024px) {
+  #tampon{
+    height: 100px;
+    max-width: 220px;
+    top: -100px;
+    left: 170px;
+  }
   h1 {
-    font-size: 115px;
+    font-size: 90px;
+    left: 0;
+    margin-top: 10px;
   }
-  hr {
-    width: 300px;
+  #planete{
+    display: none;
   }
-  #planete {
-    height: 110px;
-    width: 110px;
+  #input{
+    margin-top: 100px;
   }
-  #share, #mail, #rocket {
-    height: 40px;
-    padding-left: 15px;
-    padding-right: 15px;
+  .introduction p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  h2 {
+    font-size: 50px;
   }
   #earth {
     height: 300px;
     width: 300px;
     background-size: contain;
   }
+  .image {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #moonContainer, #moonContainer2{
+    display: none;
+  }
 }
 
 /*Mobile : entre 320 et 600 pixels (en mode portrait)*/
 @media screen and (max-width: 600px) {
-  html {
-    margin: 1%;
+  #tampon{
+    height: 90px;
+    max-width: 200px;
+    top: -80px;
+    left: 130px;
   }
   h1 {
-    font-size: 60px;
+    font-size: 70px;
     left: 0;
   }
-  #planete {
-    height: 70px;
-    width: 70px;
+  #planete{
+    display: none;
   }
-  #tampon{
-    height: 100px;
-    max-width: 230px;
-    margin: auto;
-    /*position: relative;
-    top: -120px;*/
-    z-index: 1;
-    margin-bottom: 50px;
+  h2 {
+    font-size: 40px;
+    padding: 30px;
   }
-  #icones{
-    margin-top: 10px;
+  h4 {
+    font-size: 15px;
   }
-  #share, #mail, #rocket {
-    height: 25px;
-    padding-left: 5px;
-    padding-right: 5px;
+  #input label{
+    font-size: 18px;
+  }
+  .introduction p {
+    font-size: 16px;
+    line-height: 22px;
   }
   #earth {
     height: 250px;
